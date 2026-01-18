@@ -18,8 +18,8 @@ export default function useDashboardData() {
       setIsRefreshing(true);
 
       const [statsRes, revenueRes] = await Promise.all([
-        api.get("https://ai-backend-1-8udr.onrender.com/api/admin/dashboard-stats"),
-        api.get("https://ai-backend-1-8udr.onrender.com/api/admin/revenue-stats"),
+        axios.get("https://ai-backend-1-8udr.onrender.com/api/admin/dashboard-stats"),
+        axios.get("https://ai-backend-1-8udr.onrender.com/api/admin/revenue-stats"),
       ]);
 
       if (statsRes.data.success) {
