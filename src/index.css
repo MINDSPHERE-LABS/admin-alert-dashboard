@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import dashboard styles */
+@import './styles/dashboard.css';
+
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar for body */
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #0f0c29;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #7b61ff, #302b63);
+  border-radius: 5px;
+}
+
+/* Selection */
+::selection {
+  background: rgba(123, 97, 255, 0.3);
+  color: white;
+}
