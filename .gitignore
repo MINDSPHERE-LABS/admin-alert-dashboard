@@ -12,6 +12,7 @@ pnpm-debug.log*
 # Build outputs
 # =========================
 ./build
+build/
 dist/
 .out/
 coverage/
