@@ -1,7 +1,7 @@
 import { useEffect, useState, useCallback, useRef } from "react";
 import axios from "axios";
 import toast from "react-hot-toast";
-
+import api from "../utils/api";
 export default function useDashboardData() {
   const [stats, setStats] = useState({});
   const [revenue, setRevenue] = useState({});
@@ -18,8 +18,8 @@ export default function useDashboardData() {
       setIsRefreshing(true);
 
       const [statsRes, revenueRes] = await Promise.all([
-        axios.get("/api/admin/dashboard-stats"),
-        axios.get("/api/admin/revenue-stats"),
+        api.get("/api/admin/dashboard-stats"),
+        api.get("/api/admin/revenue-stats"),
       ]);
 
       if (statsRes.data.success) {
