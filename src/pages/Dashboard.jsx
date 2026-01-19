@@ -40,10 +40,10 @@ export default function Dashboard() {
       abortControllerRef.current = controller;
 
       const [statsRes, revenueRes] = await Promise.all([
-        axios.get("/api/admin/dashboard-stats", {
+        axios.get("https://ai-backend-1-8udr.onrender.com/api/admin/dashboard-stats", {
           signal: controller.signal,
         }),
-        axios.get("/api/admin/revenue-stats", {
+        axios.get("https://ai-backend-1-8udr.onrender.com/api/admin/revenue-stats", {
           signal: controller.signal,
         }),
       ]);
